@@ -14,7 +14,5 @@ npx hardhat run scripts/deploy.js
 
 ## source
 
-https://medium.com/@Tim4l1f3/layerzero-tutorial-for-beginners-d3fe9326e8b7
-https://github.com/The-dLab/LayerZero-Demo
-
-
+- [layerzero-tutorial-for-beginners](https://medium.com/@Tim4l1f3/layerzero-tutorial-for-beginners-d3fe9326e8b7)
+- [LayerZero-Demo](https://github.com/The-dLab/LayerZero-Demo)

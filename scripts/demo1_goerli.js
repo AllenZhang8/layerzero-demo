@@ -5,21 +5,21 @@ const hre = require("hardhat");
 async function main() {
     const LayerZeroDemo1 = await hre.ethers.getContractFactory("LayerZeroDemo1");
     const layerZeroDemo1 = await LayerZeroDemo1.attach(
-        "0xD67D01D6893cC4a2E17557765987d41E778fadca"
+        "0xD96858f4ea9370317444a7C91a16782bB3F31a08"
     );
     const fees = await layerZeroDemo1.estimateFees(
-        10009,
-        "0x37587469690CC37EE19Ff6163ce7275BB1b17d3b",
+        10109,
+        "0x964eC29DA1017CeCEe8fa8Cb1b92c01cB13A5E75",
         formatBytes32String("Hello LayerZero"),
         false,
         []
     );
-    console.log(ethers.utils.formatEther(fees[0].toString()));
+    console.log(`estimateFees: ${ethers.utils.formatEther(fees[0].toString())}`);
     await layerZeroDemo1.sendMsg(
-        10009,
-        "0x37587469690CC37EE19Ff6163ce7275BB1b17d3b",
+        10109,
+        "0x964eC29DA1017CeCEe8fa8Cb1b92c01cB13A5E75",
         formatBytes32String("Hello LayerZero"),
-        { value: ethers.utils.parseEther("1") }
+        { value: ethers.utils.parseEther("1.9") }
     );
 }
 
